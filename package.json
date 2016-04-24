@@ -1,0 +1,23 @@
+{
+  "name": "mongoosejs",
+  "version": "1.0.0",
+  "description": "mongoose api",
+  "main": "index.js",
+  "dependencies": {
+    "prints": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnio/mongooseapi.git"
+  },
+  "author": "CNIO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cnio/mongooseapi/issues"
+  },
+  "homepage": "https://github.com/cnio/mongooseapi#readme"
+}

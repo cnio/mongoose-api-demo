@@ -1,4 +1,5 @@
 require('../db')
+var p = require('prints')
 var Account = require('../models/account')
 
 var account = new Account()
@@ -8,7 +9,10 @@ account.save(function(er, ret) {
 	if (er) {
 		return console.log(er)
 	};
-	console.log(ret)
+	p(ret, 'ret')
+	var res = ret.toJSON()  // toJSON? why [object Object]
+	p(res, 'ret.toJSON')
+	console.log(res)
 	console.log('save successfully!')
-	ret.greet()
+	//ret.greet() //method invoke
 })
