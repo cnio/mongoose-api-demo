@@ -5,6 +5,10 @@ var AccountSchema = new mongoose.Schema({
 	password: String
 })
 
+AccountSchema.methods.greet = function () {
+	console.log(this.username + ': hi, how are you!')
+}
+
 var Account = mongoose.model('Account', AccountSchema)
 
 module.exports = Account

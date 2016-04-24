@@ -10,4 +10,5 @@ account.save(function(er, ret) {
 	};
 	console.log(ret)
 	console.log('save successfully!')
+	ret.greet()
 })
