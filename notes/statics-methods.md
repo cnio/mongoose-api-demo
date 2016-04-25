@@ -82,3 +82,18 @@ Schema.prototype.static = function(name, fn) {
   return this;
 };
 ```
+
+## toJSON
+```
+var schema = new Schema({ name: String });
+schema.path('name').get(function (v) {
+  return v + ' is my name';
+});
+schema.set('toJSON', { getters: true, virtuals: false });
+var M = mongoose.model('Person', schema);
+var m = new M({ name: 'Max Headroom' });
+console.log(m.toObject()); // { _id: 504e0cd7dd992d9be2f20b6f, name: 'Max Headroom' }
+console.log(m.toJSON()); // { _id: 504e0cd7dd992d9be2f20b6f, name: 'Max Headroom is my name' }
+// since we know toJSON is called whenever a js object is stringified:
+console.log(JSON.stringify(m)); // { "_id": "504e0cd7dd992d9be2f20b6f", "name": "Max Headroom is my name" }
+```
