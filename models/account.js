@@ -5,9 +5,13 @@ var AccountSchema = new mongoose.Schema({
 	password: String
 })
 
-AccountSchema.methods.greet = function () {
+// AccountSchema.methods.greet = function () {
+// 	console.log(this.username + ': hi, how are you!')
+// }
+
+AccountSchema.method('sayhi', function(){
 	console.log(this.username + ': hi, how are you!')
-}
+})
 
 // 序列化结果
 AccountSchema.set('toJSON', {

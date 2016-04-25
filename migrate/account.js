@@ -14,5 +14,5 @@ account.save(function(er, ret) {
 	p(res, 'ret.toJSON')
 	console.log(res)
 	console.log('save successfully!')
-	//ret.greet() //method invoke
+	ret.sayhi() //method invoke
 })
