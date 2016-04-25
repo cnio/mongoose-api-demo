@@ -10,7 +10,7 @@ var personSchema = new Schema({
   }
 });
 
-personSchema.post('init', function (doc) {
+personSchema.post('save', function (doc) {
   console.log('this fired after a document was saved');
 });
 

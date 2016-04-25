@@ -36,22 +36,22 @@ bad.save(function(er, ret) {
 })
 
 
-----------start----------
-pre1
-----------end------------
+// ----------start----------
+// pre1
+// ----------end------------
 
 
-----------start----------
-pre2
-----------end------------
+// ----------start----------
+// pre2
+// ----------end------------
 
-mongodb open success
-saved
-{ name: { last: 'White', first: 'Walter' },
-  _id: 571ddf43723c10bc7c9e1ab4,
-  nickname: 'qun',
-  age: 22,
-  __v: 0 }
+// mongodb open success
+// saved
+// { name: { last: 'White', first: 'Walter' },
+//   _id: 571ddf43723c10bc7c9e1ab4,
+//   nickname: 'qun',
+//   age: 22,
+//   __v: 0 }
 
 
 
