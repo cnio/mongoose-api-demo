@@ -29,6 +29,18 @@ AccountSchema.method('sayhi', function(){
 	console.log(this.username + ': hi, how are you!')
 })
 
+AccountSchema.method('fuck', function(){
+    //var _this = this;
+    var Account = this.model('Account')
+    Account.find({username: 'hihi'}, function(er, doc) {
+        //doc.password = 'root'
+        //doc.save(cb)
+        console.log('fuck method')
+        console.log(doc)
+    })
+    //console.log(this.username + ': hi, how are you!')
+})
+
 var Account = mongoose.model('Account', AccountSchema)
 
 module.exports = Account
