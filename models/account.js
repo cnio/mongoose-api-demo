@@ -6,7 +6,7 @@ var AccountSchema = new mongoose.Schema({
 })
 
 // 序列化结果
-AccountSchema.set('toObject', {
+AccountSchema.set('toJSON', {
     virtuals: true,
     transform: function(doc, ret) {
         delete ret._id;
