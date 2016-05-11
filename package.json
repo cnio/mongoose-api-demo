@@ -4,7 +4,8 @@
   "description": "mongoose api",
   "main": "index.js",
   "dependencies": {
-    "prints": "^0.1.1"
+    "prints": "^0.1.1",
+    "q": "^1.4.1"
   },
   "devDependencies": {},
   "scripts": {

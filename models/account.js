@@ -2,8 +2,17 @@ var mongoose = require('mongoose')
 
 var AccountSchema = new mongoose.Schema({
 	username: String,
-	password: String
+	password: String,
+    age: Number
 })
+
+AccountSchema.statics.getUserByName = function(name, cb) {
+    return this.findOne({username: name}, cb)
+}
+
+AccountSchema.statics.getUserByAge = function(age, cb) {
+    return this.findOne({age: age}, cb)
+}
 
 // 序列化结果
 AccountSchema.set('toJSON', {
